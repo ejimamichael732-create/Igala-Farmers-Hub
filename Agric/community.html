@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Igala Farmers Hub - Community</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f1e3;
+            color: #333;
+        }
+        header {
+            background-color: #006400;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+        nav a:hover {
+            background-color: #8B4513;
+        }
+        .community-section {
+            padding: 20px;
+        }
+        .section-title {
+            text-align: center;
+            color: #006400;
+            margin-bottom: 20px;
+        }
+        .farmers-grid, .groups-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .farmer-card, .group-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 250px;
+            text-align: center;
+            padding: 15px;
+        }
+        .farmer-card img, .group-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .farmer-name, .group-name {
+            font-weight: bold;
+            color: #006400;
+            margin: 10px 0 5px;
+        }
+        .farmer-location, .group-description {
+            color: #666;
+            font-size: 0.9em;
+        }
+        footer {
+            background-color: #8B4513;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Igala Farmers Hub</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="feed.html">Feed</a>
+            <a href="learn.html">Learn</a>
+            <a href="community.html">Community</a>
+            <a href="market.html">Market</a>
+            <a href="Aboutus.html">About us</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Successful Farmers Section -->
+        <section class="community-section">
+            <h2 class="section-title">Successful Igala Farmers</h2>
+            <div class="farmers-grid">
+                <!-- Farmer 1 -->
+                <div class="farmer-card">
+                    <img src="https://c8.alamy.com/comp/2K17WDK/portrait-of-an-african-farmer-smiling-2K17WDK.jpg" alt="Farmer">
+                    <div class="farmer-name">Farmer James Okoli</div>
+                    <div class="farmer-location">Idah, Kogi State</div>
+                </div>
+                
+                <!-- Farmer 2 -->
+                <div class="farmer-card">
+                    <img src="https://c8.alamy.com/comp/2H483GX/shot-of-a-happy-female-african-farmer-in-nigeria-holding-some-money-2H483GX.jpg" alt="Farmer">
+                    <div class="farmer-name">Farmer Fatima Musa</div>
+                    <div class="farmer-location">Ankpa, Kogi State</div>
+                </div>
+                
+                <!-- Farmer 3 -->
+                <div class="farmer-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmy9C7uPGxQx7cqG3RJKRt4v5G5tVq18va6g&s" alt="Farmer">
+                    <div class="farmer-name">Farmer Daniel Ode</div>
+                    <div class="farmer-location">Anyigba, Kogi State</div>
+                </div>
+                
+                <!-- Farmer 4 -->
+                <div class="farmer-card">
+                    <img src="grace.jpg" alt="Farmer">
+                    <div class="farmer-name">Farmer Grace Aliyu</div>
+                    <div class="farmer-location">Lokoja, Kogi State</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Community Groups Section -->
+        <section class="community-section">
+            <h2 class="section-title">Farmer Cooperatives & Groups</h2>
+            <div class="groups-grid">
+                <!-- Group 1 -->
+                <div class="group-card">
+                    <img src="https://picsum.photos/seed/group1/300/300" alt="Cooperative">
+                    <div class="group-name">Yam Farmers Cooperative</div>
+                    <div class="group-description">Specializing in yam cultivation and processing</div>
+                </div>
+                
+                <!-- Group 2 -->
+                <div class="group-card">
+                    <img src="https://picsum.photos/seed/group2/300/300" alt="Cooperative">
+                    <div class="group-name">Women in Agriculture Network</div>
+                    <div class="group-description">Empowering female farmers across Igala land</div>
+                </div>
+                
+                <!-- Group 3 -->
+                <div class="group-card">
+                    <img src="https://picsum.photos/seed/group3/300/300" alt="Cooperative">
+                    <div class="group-name">Organic Farming Collective</div>
+                    <div class="group-description">Promoting sustainable and organic farming practices</div>
+                </div>
+                
+                <!-- Group 4 -->
+                <div class="group-card">
+                    <img src="https://picsum.photos/seed/group4/300/300" alt="Cooperative">
+                    <div class="group-name">Young Farmers Association</div>
+                    <div class="group-description">Engaging youth in modern agriculture</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Igala Farmers Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
