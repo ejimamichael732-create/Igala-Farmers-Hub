@@ -55,6 +55,16 @@
             height: 80px;
              max-width: 700px; 
         }
+        #mic-btn{
+            width:50px;
+            height:50px;
+            border:none;
+            border-radius:50%;
+            cursor:pointer;
+            font-size:20px;
+            background: #8B4513;
+            color:white;
+        }
         .post-btn {
             background-color: #006400;
             color: white;
@@ -107,6 +117,7 @@
         .like-btn.liked {
             color: #ff0000;
         }
+        
         footer {
             background-color: #8B4513;
             color: white;
@@ -134,6 +145,7 @@
             <div class="create-post">
                 <h3>Create a Post</h3>
                 <textarea class="post-input" placeholder="What's happening on your farm today?"></textarea>
+                <button id="mic-btn">🎤</button>
                 <button class="post-btn">Post</button>
             </div>
             
@@ -201,6 +213,35 @@
                 }
             });
         });
+    
+        const micBtn = document.getElementById("mic-btn");
+        const textarea = document.getElementById("message");
+
+        const SpeechRecognition =
+            window.SpeechRecognition || window.webkitSpeechRecognition;
+
+        if (SpeechRecognition) {
+            const recognition = new SpeechRecognition();
+
+            recognition.continuous = false;
+            recognition.lang = "en-US";
+
+            micBtn.addEventListener("click", () => {
+                recognition.start();
+            });
+
+            recognition.onresult = (event) => {
+                const text = event.results[0][0].transcript;
+                textarea.value += text;
+            };
+
+            recognition.onerror = (event) => {
+                console.log(event.error);
+            };
+        } else {
+            alert("Speech recognition is not supported in this browser.");
+        }
+
         
         // Simple post functionality
         document.querySelector('.post-btn').addEventListener('click', function() {
@@ -211,7 +252,9 @@
             } else {
                 alert('Please write something before posting.');
             }
+            
         });
+        
     </script>
 </body>
 </html>
